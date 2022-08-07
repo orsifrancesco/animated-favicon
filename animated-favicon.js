@@ -7,14 +7,23 @@ function animatedIcon() {
 		"iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABW0lEQVRYhe2WvUoDQRSFv01WiRoQ/0AwoCBYifgA+gyWljZKOkEbwcbGxsrO0sIHsNLGN7AULFTQWGkhiiiomGwiA2dgkKQI7EyaOTA7d+5c7jl7Z2dmiYiI6DUS8VeBHWAQaHrSVAC+gRNgz53YAlqB264lNxWoATPABnAqlT7QDywBZ8ATMGU4UiAT2SXwBkwDxRyXIlF7AC7k+7STRkBD9oj6R08VmAD6ZE8Cs8B9wRNZO7Qc3zBwB6y6AuyOqHsSMAa8ANvAlXbFZsgKDGi5D4Fj+eohBWSOPae+EVJAW4QUkDr2tfpS2iHYB96Bsg67eeX/MI8bbZFlOX0dy6NAxRl/AYtuBaz9rEspy6kKReVqOjlfgXEbUJOiSqClMFy3dpCqFAb7wDnwo6Ckc46uCROdAwvyDbkBKz24jtcsuX3Ldf2QlHNc+/8w38IvcAQceOKIiIjoEsAfyLiJXrpVp/0AAAAASUVORK5CYII="
 	]
 
-	if(!document.querySelector("head link[rel='icon']")) document.querySelector("head").innerHTML = document.querySelector("head").innerHTML + '<link rel="icon" type="image/png" sizes="32x32" href="">';
-	
-	document.querySelector("head link[rel='icon']").setAttribute('href', 'data:image/png;base64,' + faviconAnimation[0] + '');
+	const titles = [
+		"l......",
+		"lo.....",
+		"loa....",
+		"load..."
+	]
 
-	let animCount = 1;
+	if (!document.querySelector("head link[rel='icon']")) document.querySelector("head").innerHTML = document.querySelector("head").innerHTML + '<link rel="icon" type="image/png" sizes="32x32" href="">';
+
+	document.querySelector("head link[rel='icon']").setAttribute('href', 'data:image/png;base64,' + faviconAnimation[0] + '');
+	document.querySelector("title").innerHTML = titles[0];
+
+	let animCount = 0;
 	function animFoo() {
-		if (animCount >= 4) { animCount = 1; }
+		if (animCount >= faviconAnimation.length) { animCount = 0; }
 		document.querySelector("head link[rel='icon']").setAttribute('href', 'data:image/png;base64,' + faviconAnimation[animCount] + '');
+		document.querySelector("title").innerHTML = titles[animCount];
 		animCount++;
 	}
 
