@@ -6,7 +6,7 @@
 
 <br/>
 
-### [🎮 Demo / Example](https://orsifrancesco.github.io/animated-icon)
+### [🎮 Demo / Example](https://orsifrancesco.github.io/animated-favicon)
 ### ⚖️ Licensed under MIT
 ### 🤓 Author [@orsifrancesco](https://twitter.com/orsifrancesco)
 ### ☕ [Offer me a coffee](https://www.paypal.com/donate/?business=5EL4L2LDYVH96)
